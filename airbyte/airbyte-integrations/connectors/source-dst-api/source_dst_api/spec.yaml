@@ -1,0 +1,12 @@
+documentationUrl: https://docsurl.com
+connectionSpecification:
+  $schema: http://json-schema.org/draft-07/schema#
+  title: Dst Api Spec
+  type: object
+  required:
+    - format
+  properties:
+    format:
+      type: string
+      description : The format for the response
+      pattern: ^[a-zA-Z]+

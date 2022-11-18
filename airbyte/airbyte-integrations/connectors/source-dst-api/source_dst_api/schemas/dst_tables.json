@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id":{
+            "type":["null", "string"]
+          },
+          "text":{
+            "type":["null", "string"]
+          },
+          "unit":{
+            "type":["null", "string"]
+          },
+          "updated":{
+            "type":["null", "string"]
+          },
+          "firstPeriod": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "latestPeriod": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "active": {
+            "type": [
+              "null",
+              "bool"
+            ]
+          },
+          "variables":{
+            "type": ["null", "array"],
+            "items": {
+              "type": ["null", "object"],
+              "properties": {
+                "type":["null", "string"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

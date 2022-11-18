@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type":["null",  "object"],
+  "properties": {
+    "tables":{
+      "type":["null",  "array"],
+      "items": {
+        "type":["null", "object"],
+        "properties": {
+          "TableID": {
+            "type":["null", "string"]
+          },
+          "TableName": {
+            "type":["null",  "string"]
+          },
+          "SubjectID": {
+            "type":["null",  "string"]
+          },
+          "UpdateFrequency": {
+            "type":["null",  "string"]
+          },
+          "LatestUpdate": {
+            "type":["null",  "string"]
+          },
+          "NextUpdate": {
+            "type":["null",  "string"]
+          },
+          "Measurements": {
+            "type":["null",  "array"],
+            "items": {
+              "type":["null",  "object"],
+              "properties": {
+                "ID":{
+                  "type":["null", "string"]
+                },
+                "Name":{
+                  "type":["null", "string"]
+                }
+              }
+            }
+          },
+          "PeriodCategory": {
+            "type":["null",  "array"],
+            "items": {
+              "type":["null", "object"],
+              "properties":{
+                "type":["null", "string"]
+              }
+            }
+          },
+          "AreaHierarchy": {
+            "type":["null",  "array"],
+            "items": {
+              "type":["null", "object"],
+              "properties":{
+                "type":["null", "string"]
+              }
+            }
+          },
+          "FirstPeriod": {
+            "type":["null",  "string"]
+          },
+          "LatestPeriod": {
+            "type":["null",  "string"]
+          },
+          "Dimensions": {
+            "type":["null",  "array"],
+            "items": {
+              "type":["null",  "object"],
+              "properties": {
+                "DimensionID":{
+                  "type":["null", "string"]
+                },
+                "DimensionName":{
+                  "type":["null", "string"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
