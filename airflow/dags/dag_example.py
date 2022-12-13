@@ -1,12 +1,12 @@
 from airflow import DAG
 from airflow.utils.dates import days_ago
-from airflow.providers.airbyte.operators.airbyte import AirbyteTriggerSyncOperator
+#from airflow.providers.airbyte.operators.airbyte import AirbyteTriggerSyncOperator
 from airflow.operators.bash import BashOperator
 ##from time import sleep
 
 with DAG(dag_id='trigger_test_transform',
          default_args={'owner': 'airflow'},
-         schedule_interval='@hourly',
+         schedule_interval='@daily',
          start_date=days_ago(1)
     ) as dag:
     def generate():
