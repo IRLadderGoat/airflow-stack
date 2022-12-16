@@ -10,3 +10,36 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: jobindsats_tables
+    description: ""
+    columns:
+      - name: TableID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: jobindsats_tables_dimensions
+    description: ""
+    columns:
+      - name: TableID
+        description: "The primary key for this table"
+        tests:
+          - not_null
+
+  - name: jobindsats_tables_measurements
+    description: ""
+    columns:
+      - name: TableID
+        description: "The primary key for this table"
+        tests:
+          - not_null
+
+  - name: jobindsats_tables_areahierachy
+    description: ""
+    columns:
+      - name: TableID
+        description: "The primary key for this table"
+        tests:
+          - not_null
