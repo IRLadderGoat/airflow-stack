@@ -1,3 +1,8 @@
-.venv/
-node_modules/
-build/
+*
+!airflow/dags/*
+!airflow/doa_dbt/models/*
+!airflow/launch.sh
+
+!airbyte/airbyte-integrations/connectors/source-jobindsats-api/*
+!airbyte/airbyte-integrations/connectors/source-dst-api/*
+

@@ -24,8 +24,6 @@ with DAG(dag_id='trigger_jobindsats_job_load',
            wait_seconds=3
     )
 
-    dt_begin = BashOperator(task_id='data_transform_begin',bash_command='sleep 10' )
-
     subjects_transform = DbtRunOperator(task_id='transform_subjects', models="jobindsats_subjects")
 
     subjects_test = DbtTestOperator(task_id='test_subjects', models="jobindsats_subjects")
@@ -46,11 +44,10 @@ with DAG(dag_id='trigger_jobindsats_job_load',
 
     tables_areahierachy_test = DbtTestOperator(task_id='test_tables_hierachy', models="jobindsats_tables_hierachy")
 
-    dt_end = BashOperator(task_id='data_transform_end',bash_command='sleep 10' )
 
 
-    api_json_psql >> dt_begin >> subjects_transform >> subjects_test >>\
+    api_json_psql >> subjects_transform >> subjects_test >>\
     tables_transform >> tables_test >> tables_measurements_transform >>\
     tables_measurements_test >> tables_dimensions_transform >> \
     tables_dimensions_test >> tables_areahierachy_transform >> \
-    tables_areahierachy_test >> dt_end
+    tables_areahierachy_test
