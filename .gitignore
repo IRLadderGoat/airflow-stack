@@ -3,6 +3,8 @@
 !airflow/doa_dbt/models/*
 !airflow/launch.sh
 
+!airbyte/airbyte-integrations/connectors/source-jobindsats-api/
 !airbyte/airbyte-integrations/connectors/source-jobindsats-api/*
+!airbyte/airbyte-integrations/connectors/source-dst-api/
 !airbyte/airbyte-integrations/connectors/source-dst-api/*
 
